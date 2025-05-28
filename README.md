@@ -13,7 +13,7 @@ Jobringer is a static, multi-page job search website designed to connect job see
 - **Log In Page**: Form for email and password input with client-side validation.
 - **Sign Up Page**: Form for name, email, password, and password confirmation with client-side validation.
 - **Footer**: Consistent across all pages, with links for job seekers, employers, company info, and social media.
-- **Form Validation**: Basic client-side validation for login and signup forms, checking for empty fields and password matching.
+- **Form Validation**: Basic client-side validation for login and signup forms, checking for empty fields.
 - **Responsive Design**: Fully responsive layout, optimized for mobile, tablet, and desktop devices.
 
 ## Technologies Used
