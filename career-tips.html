@@ -1,16 +1,28 @@
-<!-- career-tips.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobringer - Career Tips</title>
+    <title>Career Tips - Jobringer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .article-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+    </style>
 </head>
-<body class="font-sans antialiased text-gray-800">
-    <!-- Header -->
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Header/Navigation -->
     <header class="sticky top-0 z-50 bg-white shadow-sm">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
@@ -24,18 +36,18 @@
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html" class="text-blue-600 font-medium hover:text-blue-800 transition">Home</a>
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
                     <a href="jobs.html" class="text-gray-600 hover:text-blue-600 transition">Jobs</a>
                     <a href="companies.html" class="text-gray-600 hover:text-blue-600 transition">Companies</a>
-                    <a href="career-tips.html" class="text-gray-600 hover:text-blue-600 transition">Career Tips</a>
-                   <div class="flex space-x-4 ml-6">
+                    <a href="career-tips.html" class="text-blue-600 font-medium hover:text-blue-800 transition">Career Tips</a>
+                    <div class="flex space-x-4 ml-6">
                         <a href="login.html" class="px-4 py-2 text-blue-600 hover:bg-blue-50 rounded-md transition">Log In</a>
                         <a href="signup.html" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Sign Up</a>
                     </div>
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <button id="menu-toggle" class="md:hidden focus:outline-none hamburger-menu">
+                <button id="menu-toggle" class="md:hidden focus:outline-none">
                     <i class="fas fa-bars text-2xl text-gray-700"></i>
                 </button>
             </div>
@@ -43,37 +55,214 @@
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="mobile-menu md:hidden bg-white">
                 <div class="px-2 pt-2 pb-4 space-y-1">
-                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-blue-50">Home</a>
+                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Home</a>
                     <a href="jobs.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Jobs</a>
                     <a href="companies.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Companies</a>
-                    <a href="career-tips.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Career Tips</a>
+                    <a href="career-tips.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-blue-50">Career Tips</a>
                     <div class="pt-4 border-t border-gray-200">
-                        <a href="#" class="block w-full px-4 py-2 text-center rounded-md text-base font-medium text-blue-600 hover:bg-blue-50">Log In</a>
-                        <a href="#" class="block w-full px-4 py-2 mt-2 text-center rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700">Sign Up</a>
+                        <a href="login.html" class="block w-full px-4 py-2 text-center rounded-md text-base font-medium text-blue-600 hover:bg-blue-50">Log In</a>
+                        <a href="signup.html" class="block w-full px-4 py-2 mt-2 text-center rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700">Sign Up</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Career Tips Section -->
-    <section class="py-16">
+    <!-- Page Header -->
+    <section class="bg-white py-12 border-b">
         <div class="container mx-auto px-4">
-            <h1 class="text-4xl font-bold mb-6 text-center">Career Tips</h1>
-            <p class="text-xl text-gray-600 mb-10 text-center max-w-2xl mx-auto">Expert advice to boost your career and land your dream job.</p>
-            
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
-                    <h3 class="font-bold text-lg mb-2">How to Write a Winning Resume</h3>
-                    <p class="text-gray-600 mb-4">Tips and tricks to make your resume stand out to recruiters.</p>
-                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Read More <i class="fas fa-arrow-right ml-1"></i></a>
-                </div>
-                <!-- Add more tip cards as needed -->
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">Career Tips & Advice</h1>
+                <p class="text-gray-600 text-lg">Expert insights to help you advance your career and land your dream job</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Featured Article -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg overflow-hidden text-white">
+                    <div class="p-8 md:p-12">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-medium">Featured Article</span>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold mb-4">10 Essential Skills Every Professional Needs in 2024</h2>
+                        <p class="text-lg opacity-90 mb-6">Discover the most in-demand skills that will set you apart in today's competitive job market and future-proof your career.</p>
+                        <a href="article-detail.html?id=featured" class="inline-flex items-center bg-white text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">
+                            Read Full Article <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-8 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-xl font-bold mb-6">Browse by Category</h3>
+                <div class="flex flex-wrap gap-3">
+                    <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700 transition">All Articles</a>
+                    <a href="#" class="px-4 py-2 bg-white text-gray-700 rounded-full text-sm hover:bg-gray-100 transition">Resume Tips</a>
+                    <a href="#" class="px-4 py-2 bg-white text-gray-700 rounded-full text-sm hover:bg-gray-100 transition">Interview Prep</a>
+                    <a href="#" class="px-4 py-2 bg-white text-gray-700 rounded-full text-sm hover:bg-gray-100 transition">Career Growth</a>
+                    <a href="#" class="px-4 py-2 bg-white text-gray-700 rounded-full text-sm hover:bg-gray-100 transition">Networking</a>
+                    <a href="#" class="px-4 py-2 bg-white text-gray-700 rounded-full text-sm hover:bg-gray-100 transition">Salary Negotiation</a>
+                    <a href="#" class="px-4 py-2 bg-white text-gray-700 rounded-full text-sm hover:bg-gray-100 transition">Remote Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Article Card 1 -->
+                    <article class="article-card bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition duration-300">
+                        <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                            <i class="fas fa-file-alt text-white text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="px-3 py-1 bg-blue-50 text-blue-600 text-xs rounded-full">Resume Tips</span>
+                                <span class="text-gray-500 text-sm ml-auto">5 min read</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3">How to Write a Resume That Gets You Hired</h3>
+                            <p class="text-gray-600 mb-4">Learn the essential elements of a winning resume and common mistakes to avoid when applying for your dream job.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">Dec 15, 2025</span>
+                                <a href="article-detail.html?id=1" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 2 -->
+                    <article class="article-card bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition duration-300">
+                        <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                            <i class="fas fa-comments text-white text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="px-3 py-1 bg-green-50 text-green-600 text-xs rounded-full">Interview Prep</span>
+                                <span class="text-gray-500 text-sm ml-auto">7 min read</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3">Ace Your Next Job Interview: A Complete Guide</h3>
+                            <p class="text-gray-600 mb-4">Master the art of interviewing with proven strategies, common questions, and tips to make a lasting impression.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">Dec 12, 2025</span>
+                                <a href="article-detail.html?id=2" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 3 -->
+                    <article class="article-card bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition duration-300">
+                        <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-white text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="px-3 py-1 bg-purple-50 text-purple-600 text-xs rounded-full">Career Growth</span>
+                                <span class="text-gray-500 text-sm ml-auto">6 min read</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3">Building a Personal Brand That Opens Doors</h3>
+                            <p class="text-gray-600 mb-4">Discover how to create and maintain a professional brand that attracts opportunities and advances your career.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">Dec 10, 2025</span>
+                                <a href="article-detail.html?id=3" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 4 -->
+                    <article class="article-card bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition duration-300">
+                        <div class="h-48 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                            <i class="fas fa-users text-white text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="px-3 py-1 bg-red-50 text-red-600 text-xs rounded-full">Networking</span>
+                                <span class="text-gray-500 text-sm ml-auto">4 min read</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3">Networking Strategies for Introverts</h3>
+                            <p class="text-gray-600 mb-4">Effective networking tips for introverted professionals to build meaningful connections without feeling overwhelmed.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">Dec 8, 2025</span>
+                                <a href="article-detail.html?id=4" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 5 -->
+                    <article class="article-card bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition duration-300">
+                        <div class="h-48 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
+                            <i class="fas fa-dollar-sign text-white text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="px-3 py-1 bg-yellow-50 text-yellow-600 text-xs rounded-full">Salary Negotiation</span>
+                                <span class="text-gray-500 text-sm ml-auto">8 min read</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3">The Art of Salary Negotiation: Get What You're Worth</h3>
+                            <p class="text-gray-600 mb-4">Learn proven techniques to negotiate your salary confidently and secure the compensation you deserve.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">Dec 5, 2025</span>
+                                <a href="article-detail.html?id=5" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 6 -->
+                    <article class="article-card bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition duration-300">
+                        <div class="h-48 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center">
+                            <i class="fas fa-home text-white text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="px-3 py-1 bg-indigo-50 text-indigo-600 text-xs rounded-full">Remote Work</span>
+                                <span class="text-gray-500 text-sm ml-auto">6 min read</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3">Thriving in Remote Work: Productivity Tips</h3>
+                            <p class="text-gray-600 mb-4">Essential strategies to stay productive, motivated, and connected while working from home or remotely.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">Dec 3, 2025</span>
+                                <a href="article-detail.html?id=6" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center mt-12">
+                    <button class="px-8 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition font-medium">
+                        Load More Articles
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">Stay Updated with Career Tips</h2>
+                <p class="text-xl opacity-90 mb-8">Get the latest career advice and job market insights delivered to your inbox weekly.</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button type="submit" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-md font-medium transition">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
     <footer class="bg-gray-50 pt-16 pb-8">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
@@ -131,7 +320,7 @@
             </div>
             
             <div class="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-500 mb-4 md:mb-0">© 2023 Jobringer. All rights reserved.</p>
+                <p class="text-gray-500 mb-4 md:mb-0">© 2025 Jobringer. All rights reserved.</p>
                 <div class="flex space-x-6">
                     <a href="#" class="text-gray-500 hover:text-blue-600 transition">Privacy Policy</a>
                     <a href="#" class="text-gray-500 hover:text-blue-600 transition">Terms of Service</a>
@@ -141,6 +330,6 @@
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
